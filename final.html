@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!-- ######################## HEAD ######################## -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <title>NYC History Guessr</title>
+</head>
+
+<!-- ######################## BODY ######################## -->
+<body>
+    <div class="container" role="main">
+        
+        <!-- ##################### LEFT SIDE ###################### -->
+        <div class="left">
+
+            <!-- ####################### TITLE ######################## -->
+            <div class="title">
+                <h1>NYC<br>History<br>Guessr</h1>
+                <p>Use the map and timeline to guess where and when the photo was taken.</p>
+            </div>
+
+            <!-- ####################### PHOTO ######################## -->
+            <div class="photo"><img id="img"> </div>
+        </div>
+        
+        <!-- ##################### RIGHT SIDE ##################### -->
+        <div class="right">
+
+            <!-- ######################## MAP ######################### -->
+            <div id="map" style="height: 450px;"></div>
+            
+            <!-- ######################## MAP ######################### -->
+            <div id="timeline">
+                <div id="correctDot"></div>
+                <div id="correctYear"></div>
+                <div id="line"></div>
+                <div id="year">1900</div>
+                <input type="range" id="slider" min="1850" max="2025" value="1900">
+                <div class="ticks">
+                    <span>1850</span>
+                    <span>2025</span>
+                </div>
+            </div>
+
+            <!-- ####################### BUTTON ####################### -->
+            <div id="submit"><button id="submitbutton">submit</button></div>
+            
+        </div>
+    </div>
+
+    <!--<footer>Made by Clare Staib-Kaufman</footer>-->
+
+<!-- ####################### SCRIPT ####################### -->
+<script src="final.js"></script>
+
+</body>
